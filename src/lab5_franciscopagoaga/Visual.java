@@ -54,11 +54,35 @@ public class Visual extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         mensualidad = new javax.swing.JTextField();
         Clase = new javax.swing.JDialog();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        Conaire = new javax.swing.JRadioButton();
+        sinaire = new javax.swing.JRadioButton();
+        jLabel18 = new javax.swing.JLabel();
+        Seccion = new javax.swing.JTextField();
+        Edificio = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        Salon = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        nombclase = new javax.swing.JTextField();
         Maestros = new javax.swing.JDialog();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        nombmaestro = new javax.swing.JTextField();
+        apellidomaestro = new javax.swing.JTextField();
+        paga = new javax.swing.JTextField();
+        Edad = new javax.swing.JFormattedTextField();
+        agregrarmaestro = new javax.swing.JButton();
         genero = new javax.swing.ButtonGroup();
         tree = new javax.swing.JPopupMenu();
         Eliminar = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        Aire = new javax.swing.ButtonGroup();
+        Listas = new javax.swing.JPopupMenu();
+        Modificar = new javax.swing.JMenuItem();
         agregarestudiantes = new javax.swing.JButton();
         agregarclases = new javax.swing.JButton();
         agregarmaestros = new javax.swing.JButton();
@@ -67,6 +91,12 @@ public class Visual extends javax.swing.JFrame {
         listaestud = new javax.swing.JList<>();
         jScrollPane3 = new javax.swing.JScrollPane();
         treeestud = new javax.swing.JTree();
+        jLabel10 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        listamaestros = new javax.swing.JList<>();
+        jLabel11 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        listaclases = new javax.swing.JList<>();
 
         jLabel4.setText("Nombre:");
 
@@ -218,26 +248,171 @@ public class Visual extends javax.swing.JFrame {
                 .addContainerGap(42, Short.MAX_VALUE))
         );
 
+        jLabel16.setText("Nombre");
+
+        jLabel17.setText("Aire Acondicionado");
+
+        Aire.add(Conaire);
+        Conaire.setText("Con Aire");
+
+        Aire.add(sinaire);
+        sinaire.setText("Sin aire");
+
+        jLabel18.setText("seccion");
+
+        jLabel19.setText("Edificio");
+
+        jLabel20.setText("Salon");
+
+        jButton2.setText("Agregar Clase");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout ClaseLayout = new javax.swing.GroupLayout(Clase.getContentPane());
         Clase.getContentPane().setLayout(ClaseLayout);
         ClaseLayout.setHorizontalGroup(
             ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(ClaseLayout.createSequentialGroup()
+                .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ClaseLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(ClaseLayout.createSequentialGroup()
+                                .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel18)
+                                    .addComponent(jLabel19))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Edificio)
+                                    .addComponent(Seccion)))
+                            .addGroup(ClaseLayout.createSequentialGroup()
+                                .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(ClaseLayout.createSequentialGroup()
+                                        .addComponent(jLabel17)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Conaire)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(sinaire))
+                                    .addGroup(ClaseLayout.createSequentialGroup()
+                                        .addComponent(jLabel16)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(nombclase))
+                                    .addGroup(ClaseLayout.createSequentialGroup()
+                                        .addComponent(jLabel20)
+                                        .addGap(22, 22, 22)
+                                        .addComponent(Salon)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(ClaseLayout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(jButton2)))
+                .addGap(117, 117, 117))
         );
         ClaseLayout.setVerticalGroup(
             ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(ClaseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(nombclase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(sinaire)
+                    .addComponent(Conaire))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(Seccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Edificio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(Salon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(80, 80, 80))
         );
+
+        jLabel12.setText("Nombre");
+
+        jLabel13.setText("Apellido");
+
+        jLabel14.setText("Salario");
+
+        jLabel15.setText("Edad");
+
+        try {
+            Edad.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        agregrarmaestro.setText("Agregar");
+        agregrarmaestro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                agregrarmaestroMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout MaestrosLayout = new javax.swing.GroupLayout(Maestros.getContentPane());
         Maestros.getContentPane().setLayout(MaestrosLayout);
         MaestrosLayout.setHorizontalGroup(
             MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(MaestrosLayout.createSequentialGroup()
+                .addGroup(MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MaestrosLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(MaestrosLayout.createSequentialGroup()
+                                    .addComponent(jLabel12)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(nombmaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(MaestrosLayout.createSequentialGroup()
+                                    .addComponent(jLabel13)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(apellidomaestro))
+                                .addGroup(MaestrosLayout.createSequentialGroup()
+                                    .addComponent(jLabel14)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(paga, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(MaestrosLayout.createSequentialGroup()
+                                .addComponent(jLabel15)
+                                .addGap(30, 30, 30)
+                                .addComponent(Edad, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(MaestrosLayout.createSequentialGroup()
+                        .addGap(152, 152, 152)
+                        .addComponent(agregrarmaestro)))
+                .addContainerGap(169, Short.MAX_VALUE))
         );
         MaestrosLayout.setVerticalGroup(
             MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(MaestrosLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(nombmaestro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(apellidomaestro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel14)
+                    .addComponent(paga, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(Edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(agregrarmaestro)
+                .addGap(89, 89, 89))
         );
 
         Eliminar.setText("jMenuItem1");
@@ -245,6 +420,9 @@ public class Visual extends javax.swing.JFrame {
 
         jMenuItem1.setText("jMenuItem1");
         tree.add(jMenuItem1);
+
+        Modificar.setText("Eliminar");
+        Listas.add(Modificar);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -256,8 +434,18 @@ public class Visual extends javax.swing.JFrame {
         });
 
         agregarclases.setText("Agregar Clases");
+        agregarclases.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                agregarclasesMouseClicked(evt);
+            }
+        });
 
         agregarmaestros.setText("Agregar Mestros");
+        agregarmaestros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                agregarmaestrosMouseClicked(evt);
+            }
+        });
 
         jLabel3.setText("Estudiantes");
 
@@ -269,9 +457,19 @@ public class Visual extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(listaestud);
 
-        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Estudiantes");
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Carreras");
         treeestud.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane3.setViewportView(treeestud);
+
+        jLabel10.setText("Maestros");
+
+        listamaestros.setModel(new DefaultListModel());
+        jScrollPane1.setViewportView(listamaestros);
+
+        jLabel11.setText("Clases");
+
+        listaclases.setModel(new DefaultListModel());
+        jScrollPane4.setViewportView(listaclases);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -281,20 +479,32 @@ public class Visual extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(51, 51, 51)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(106, 106, 106)
                         .addComponent(agregarestudiantes)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 271, Short.MAX_VALUE)
+                        .addGap(318, 318, 318)
                         .addComponent(agregarclases)
-                        .addGap(186, 186, 186))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(51, 51, 51)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(85, 133, Short.MAX_VALUE)))
+                        .addGap(243, 243, 243)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10))
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addGap(167, 167, 167))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(349, 349, 349)
+                .addGap(413, 413, 413)
                 .addComponent(agregarmaestros)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -305,14 +515,19 @@ public class Visual extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(agregarclases)
                     .addComponent(agregarestudiantes))
-                .addGap(18, 18, 18)
+                .addGap(46, 46, 46)
                 .addComponent(agregarmaestros)
-                .addGap(41, 41, 41)
-                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2))
+                    .addComponent(jScrollPane2)
+                    .addComponent(jScrollPane4)
+                    .addComponent(jScrollPane1))
                 .addContainerGap(170, Short.MAX_VALUE))
         );
 
@@ -358,7 +573,6 @@ public class Visual extends javax.swing.JFrame {
             }
             String facultad = (String) cb1.getSelectedItem();
             String carrera = (String) carreras.getSelectedItem();
-            System.out.println(facultad + " " + carrera);
             String jefedecarrera = jefecarrera.getText();
             double costomensual = Double.parseDouble(mensualidad.getText());
             DefaultListModel modelo = (DefaultListModel) listaestud.getModel();
@@ -379,7 +593,7 @@ public class Visual extends javax.swing.JFrame {
                 DefaultTreeModel modeloARBOL = (DefaultTreeModel) treeestud.getModel();
                 DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
                 //obtener la persona a guardar
-                        DefaultListModel modeloLISTA = (DefaultListModel) listaestud.getModel();
+                DefaultListModel modeloLISTA = (DefaultListModel) listaestud.getModel();
                 String carrera, nombre, apellido, genero, facultad;
                 int edad, numcuenta;
                 Carrera x = ((Estudiante) modeloLISTA.get(listaestud.getSelectedIndex())).getCarrera();
@@ -391,33 +605,47 @@ public class Visual extends javax.swing.JFrame {
                 numcuenta = ((Estudiante) modeloLISTA.get(listaestud.getSelectedIndex())).getNumcuenta();
                 edad = ((Estudiante) modeloLISTA.get(listaestud.getSelectedIndex())).getEdad();
                 int centinela = -1;
-                int centinela2 = -1;
+                int centinela2 = -1,centinela3=-1;
                 for (int i = 0; i < raiz.getChildCount(); i++) {
                     if (raiz.getChildAt(i).toString().equals(facultad)) {
+                        for (int j = 0; j < raiz.getChildAt(i).getChildCount(); j++) {
+                            if (raiz.getChildAt(i).getChildAt(j).toString().equals(carrera)) {
+                                for (int k = 0; k < raiz.getChildAt(i).getChildAt(j).getChildCount(); k++) {
+                                    if (raiz.getChildAt(i).getChildAt(j).getChildAt(k).toString().equals("Estudiantes")) {
+                                        DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Estudiante(nombre, apellido, genero, numcuenta, edad, x));
+                                        ((DefaultMutableTreeNode)raiz.getChildAt(i).getChildAt(j).getChildAt(k)).add(p);
+                                    }
+                                    centinela3=1;
+                                }
+                                centinela=1;
+                            }
+                        }
                         centinela2 = 1;
-                    } //fin if
+                    } 
                 }
                 if (centinela2 == -1) {
                     DefaultMutableTreeNode n = new DefaultMutableTreeNode(facultad);
                     raiz.add(n);
-                }
-                
-                for (int i = 0; i < raiz.getDepth(); i++) {
-                    for (int j = 0; j < raiz.getChildCount(); j++) {
+                    raiz.getIndex(n);
+                    DefaultMutableTreeNode q=new DefaultMutableTreeNode(carrera);
+                    ((DefaultMutableTreeNode)raiz.getChildAt(raiz.getIndex(n))).add(q);
+                    DefaultMutableTreeNode t=new DefaultMutableTreeNode("Estudiantes");
+                    ((DefaultMutableTreeNode)raiz.getChildAt(raiz.getIndex(n)).getChildAt(0)).add(t);
+                    DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Estudiante(nombre, apellido, genero, numcuenta, edad, x));
+                    ((DefaultMutableTreeNode)raiz.getChildAt(raiz.getIndex(n)).getChildAt(0).getChildAt(0)).add(p);
+                } else if (centinela==-1) {
+                    DefaultMutableTreeNode q=new DefaultMutableTreeNode(carrera);
+                    for (int i = 0; i < raiz.getChildCount(); i++) {
                         if (raiz.getChildAt(i).toString().equals(facultad)) {
+                            ((DefaultMutableTreeNode)raiz.getChildAt(i)).add(q);
+                            DefaultMutableTreeNode t=new DefaultMutableTreeNode("Estudiantes");
+                            ((DefaultMutableTreeNode)raiz.getChildAt(i).getChildAt(0)).add(t);
                             DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Estudiante(nombre, apellido, genero, numcuenta, edad, x));
-                            ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
-                            centinela = 1;
-                        } //fin if
-                        
+                            ((DefaultMutableTreeNode)raiz.getChildAt(i).getChildAt(0).getChildAt(0)).add(p);
+                            
+                        }
                     }
                 }
-                if (centinela == -1) {
-                    DefaultMutableTreeNode n = new DefaultMutableTreeNode(carrera);
-                    DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Estudiante(nombre, apellido, genero, numcuenta, edad, x));
-                    n.add(p);
-                    raiz.add(n);
-                }  // fin if          
                 modeloARBOL.reload();
 
             } else {
@@ -426,6 +654,63 @@ public class Visual extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_listaestudMouseClicked
+
+    private void agregrarmaestroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregrarmaestroMouseClicked
+        // TODO add your handling code here:
+        try {
+            String nombre, apellido;
+            int edad;
+            double salario;
+            nombre = nombmaestro.getText();
+            apellido = apellidomaestro.getText();
+            salario = Double.parseDouble(paga.getText());
+            edad = Integer.parseInt(Edad.getText());
+            DefaultListModel modelo = (DefaultListModel) listamaestros.getModel();
+            modelo.addElement(new Maestros(nombre, apellido, salario, edad));
+            listamaestros.setModel(modelo);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(Estudiantes, "Sucedio un error y no se guardo");
+        }
+
+    }//GEN-LAST:event_agregrarmaestroMouseClicked
+
+    private void agregarmaestrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarmaestrosMouseClicked
+        // TODO add your handling code here:
+        Maestros.setModal(true);
+        Maestros.pack();
+        Maestros.setLocationRelativeTo(this);
+        Maestros.setVisible(true);
+    }//GEN-LAST:event_agregarmaestrosMouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        try{
+            String nombre, aire = "";
+            int seccion, edificio, salon;
+            nombre = nombclase.getText();
+            if (Conaire.isSelected()) {
+                aire = "Con aire";
+            } else if (sinaire.isSelected()) {
+                aire = "Sin aire";
+            }
+            seccion = Integer.parseInt(Seccion.getText());
+            edificio = Integer.parseInt(Edificio.getText());
+            salon = Integer.parseInt(Salon.getText());
+            DefaultListModel modelo = (DefaultListModel) listaclases.getModel();
+            modelo.addElement(new Clases(nombre,aire,seccion,edificio,salon));
+            listaclases.setModel(modelo);
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(Estudiantes, "Sucedio un error y no se guardo");
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void agregarclasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_agregarclasesMouseClicked
+        // TODO add your handling code here:
+        Clase.setModal(true);
+        Clase.pack();
+        Clase.setLocationRelativeTo(this);
+        Clase.setVisible(true);
+    }//GEN-LAST:event_agregarclasesMouseClicked
 
     /**
      * @param args the command line arguments
@@ -463,22 +748,44 @@ public class Visual extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup Aire;
     private javax.swing.JDialog Clase;
+    private javax.swing.JRadioButton Conaire;
+    private javax.swing.JFormattedTextField Edad;
+    private javax.swing.JTextField Edificio;
     private javax.swing.JMenuItem Eliminar;
     private javax.swing.JDialog Estudiantes;
+    private javax.swing.JPopupMenu Listas;
     private javax.swing.JDialog Maestros;
+    private javax.swing.JMenuItem Modificar;
+    private javax.swing.JTextField Salon;
+    private javax.swing.JTextField Seccion;
     private javax.swing.JButton agregarclases;
     private javax.swing.JButton agregarestudiantes;
     private javax.swing.JButton agregarmaestros;
+    private javax.swing.JButton agregrarmaestro;
     private javax.swing.JTextField apellidoestud;
+    private javax.swing.JTextField apellidomaestro;
     private javax.swing.JComboBox<String> carreras;
     private javax.swing.JComboBox<String> cb1;
     private javax.swing.JFormattedTextField edadestud;
     private javax.swing.JRadioButton femenino;
     private javax.swing.ButtonGroup genero;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -487,14 +794,22 @@ public class Visual extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextField jefecarrera;
+    private javax.swing.JList<String> listaclases;
     private javax.swing.JList<String> listaestud;
+    private javax.swing.JList<String> listamaestros;
     private javax.swing.JRadioButton masculino;
     private javax.swing.JTextField mensualidad;
+    private javax.swing.JTextField nombclase;
+    private javax.swing.JTextField nombmaestro;
     private javax.swing.JTextField nombreestud;
     private javax.swing.JFormattedTextField numcuenta;
+    private javax.swing.JTextField paga;
+    private javax.swing.JRadioButton sinaire;
     private javax.swing.JPopupMenu tree;
     private javax.swing.JTree treeestud;
     // End of variables declaration//GEN-END:variables

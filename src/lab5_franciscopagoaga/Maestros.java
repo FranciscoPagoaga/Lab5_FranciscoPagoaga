@@ -66,5 +66,10 @@ public class Maestros {
     public void setClases(ArrayList<Clases> clases) {
         this.clases = clases;
     }
+
+    @Override
+    public String toString() {
+        return nombre+" "+apellido;
+    }
     
 }

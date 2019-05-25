@@ -63,5 +63,10 @@ public class Clases {
     public void setSalon(int salon) {
         this.salon = salon;
     }
+
+    @Override
+    public String toString() {
+        return nombre;
+    }
     
 }
